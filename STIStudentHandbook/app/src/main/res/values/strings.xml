@@ -2,4 +2,39 @@
     <string name="app_name">STI Student Handbook</string>
     <string name="goto_home">Go To Home</string>
     <string name="todo">TO DO</string>
+    <string name="sti_history">STI History</string>
+    <string name="sti_history_content_headline">From its humble beginnings on August 21, 1983 as a computer training center with only two campuses, STI now has campuses all over the Philippines and has diversified into ICT-enhanced programs in Information Technology, Business and Management, Tourism and Hospitality Management, Engineering, and Arts and Sciences.</string>
+    <string name="sti_history_content">It all started when four visionaries conceptualized setting up a training center to fill very specific manpower needs.
+
+It was in the early ‘80s when Augusto C. Lagman, Herman T. Gamboa, Benjamin A. Santos, and Edgar H. Sarte — four entrepreneurs came together to set up Systems Technology Institute (STI), a training center that delivers basic programming education to professionals and students who want to learn this new skill.
+
+Systems Technology Institute’s name came from countless brainstorming sessions among the founders, perhaps from Sarte’s penchant for three-letter acronyms from the companies he managed at the time.
+
+The first two schools were inaugurated in August 21, 1983 in Buendia, Makati and in España, Manila, and offered basic computer programming courses. With a unique and superior product on their hands, it was not difficult to expand the franchise through the founders’ business contacts. A year after the first two schools opened, the franchise grew to include STI Binondo, Cubao, and Taft.
+
+A unique value proposition spelled the difference for the STI brand then: “First We’ll Teach You, Then We’ll Hire You.” Through its unique Guaranteed Hire Program (GHP), all qualified graduates were offered jobs by one of the founders’ companies, or through their contacts in the industry.
+
+The schools’ 1st batch of graduates, all 11 of them, were hired by Systems Resources Incorporated. And through GHP, more qualified STI graduates found themselves working in their field of interest straight out of school.
+
+No one among the four founders imagined that the Systems Technology Institute would become a college, or would grow to have over 100 schools across the country. But it did, all because of its unique value proposition, the synergy between the founders and their personnel, and the management’s faithfulness to quality.
+
+A long way since its birth, STI’s thrust has permeated right into the core of the globally competitive market — it has transcended beyond ICT and beyond education, addressing the need for job-ready graduates.</string>
+
+    <string name="sty_hymn_title">STI Hymn</string>
+    <string name="sty_hymn_title_lyrics">
+        Aim high with STI \n
+The future is here today \n
+Fly high with STI \n
+Be the best that you can be \n
+Onward to tomorrow \n
+With dignity and pride \n
+A vision of excellence \n
+Our resounding battle cry \n
+Aim high with STI \n
+The future is here today \n
+Fly high with STI \n
+Be the best that you can be</string>
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="stop">Stop</string>
 </resources>

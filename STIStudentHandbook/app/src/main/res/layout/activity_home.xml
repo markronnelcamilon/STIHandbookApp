@@ -27,4 +27,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
         app:srcCompat="@mipmap/ic_calculator" />
+
+    <ImageButton
+        android:id="@+id/historyImageButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFEB3B"
+        app:layout_constraintBottom_toBottomOf="@+id/calculatorImageButton"
+        app:layout_constraintStart_toEndOf="@+id/calculatorImageButton"
+        app:layout_constraintTop_toTopOf="@+id/calculatorImageButton"
+        app:srcCompat="@drawable/ic_history" />
+
+    <ImageButton
+        android:id="@+id/stiHymnImageButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:background="#FFEB3B"
+        app:layout_constraintBottom_toBottomOf="@+id/historyImageButton"
+        app:layout_constraintStart_toEndOf="@+id/historyImageButton"
+        app:layout_constraintTop_toTopOf="@+id/historyImageButton"
+        app:srcCompat="@drawable/ic_sti_hymn" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

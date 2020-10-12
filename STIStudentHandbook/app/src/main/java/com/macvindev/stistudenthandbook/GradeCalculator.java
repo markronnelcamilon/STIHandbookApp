@@ -2,6 +2,7 @@ package com.macvindev.stistudenthandbook;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +15,7 @@ public class GradeCalculator extends AppCompatActivity {
     Button clearButton, calculateButton;
     TextView averageTextView;
 
-    Double prelimFloat, midtermFloat, pre_finalFloat, finalFloat, averageFloat;
+    Double prelimDouble, midtermDouble, pre_finalDouble, finalDouble, averageDouble;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,17 +36,18 @@ public class GradeCalculator extends AppCompatActivity {
         averageTextView = findViewById(R.id.averageTextView);
 
         calculateButton.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("DefaultLocale")
             @Override
             public void onClick(View v) {
-                prelimFloat = Double.parseDouble(prelimEditText.getText().toString());
-                midtermFloat = Double.parseDouble(midtermEditText.getText().toString());
-                pre_finalFloat =Double.parseDouble(pre_finalEditText.getText().toString());
-                finalFloat = Double.parseDouble(finalEditText.getText().toString());
+                prelimDouble = Double.parseDouble(prelimEditText.getText().toString());
+                midtermDouble = Double.parseDouble(midtermEditText.getText().toString());
+                pre_finalDouble =Double.parseDouble(pre_finalEditText.getText().toString());
+                finalDouble = Double.parseDouble(finalEditText.getText().toString());
 
                 // Compute Average
-                averageFloat = ( prelimFloat * .20 + midtermFloat * .20 + pre_finalFloat * .20 + finalFloat * .40);
-
-                averageTextView.setText(averageFloat.toString());
+                averageDouble = ( prelimDouble * .20 + midtermDouble * .20 + pre_finalDouble * .20 + finalDouble * .40);
+                //String.format("%.2f", averageFloat);
+                averageTextView.setText((String.format("%.2f", averageDouble)));
             }
         });
 

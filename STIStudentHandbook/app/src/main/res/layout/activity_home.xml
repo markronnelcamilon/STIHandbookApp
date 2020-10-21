@@ -21,11 +21,11 @@
         android:id="@+id/calculatorImageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
         android:background="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/emailTextView"
         app:srcCompat="@mipmap/ic_calculator" />
 
     <ImageButton
@@ -50,5 +50,26 @@
         app:layout_constraintStart_toEndOf="@+id/historyImageButton"
         app:layout_constraintTop_toTopOf="@+id/historyImageButton"
         app:srcCompat="@drawable/ic_sti_hymn" />
+
+    <TextView
+        android:id="@+id/emailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <ImageButton
+        android:id="@+id/stiWebsiteImageButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFEB3B"
+        app:layout_constraintBottom_toBottomOf="@+id/stiHymnImageButton"
+        app:layout_constraintStart_toEndOf="@+id/stiHymnImageButton"
+        app:layout_constraintTop_toTopOf="@+id/stiHymnImageButton"
+        app:srcCompat="@drawable/ic_sti_website" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

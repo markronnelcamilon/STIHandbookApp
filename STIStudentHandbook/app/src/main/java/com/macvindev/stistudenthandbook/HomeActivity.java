@@ -15,6 +15,7 @@ public class HomeActivity extends AppCompatActivity {
     ImageButton historyImageButton;
     ImageButton stiHymnImageButton;
     ImageButton stiWebsiteImageButton;
+    ImageButton stiAdImageButton;
 
     TextView emailTextView;
 
@@ -32,6 +33,7 @@ public class HomeActivity extends AppCompatActivity {
         historyImageButton = findViewById(R.id.historyImageButton);
         stiHymnImageButton = findViewById(R.id.stiHymnImageButton);
         stiWebsiteImageButton = findViewById(R.id.stiWebsiteImageButton);
+        stiAdImageButton = findViewById(R.id.stiAdImageButton);
 
         emailTextView = findViewById(R.id.emailTextView);
 
@@ -69,6 +71,13 @@ public class HomeActivity extends AppCompatActivity {
                 Intent intentToSTIWebsite = new Intent(Intent.ACTION_VIEW);
                 intentToSTIWebsite.setData(Uri.parse(url));
                 startActivity(intentToSTIWebsite);
+            }
+        });
+        stiAdImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentToSTIVideo = new Intent (HomeActivity.this, VideoActivity.class);
+                startActivity(intentToSTIVideo);
             }
         });
     }

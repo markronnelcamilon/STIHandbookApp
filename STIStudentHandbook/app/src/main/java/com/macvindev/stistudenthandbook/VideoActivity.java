@@ -3,7 +3,8 @@ package com.macvindev.stistudenthandbook;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.widget.Toast;
+import android.widget.MediaController;
+import android.widget.VideoView;
 
 public class VideoActivity extends AppCompatActivity {
 
@@ -11,6 +12,15 @@ public class VideoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video);
-        Toast.makeText(this, "Video", Toast.LENGTH_SHORT).show();
+
+        VideoView stiAdVideoView = findViewById(R.id.stiAdVideoView);
+        stiAdVideoView.setVideoPath("android.resource://" + getPackageName() + "/"+ R.raw.sti_ad);
+
+        MediaController mediaController = new MediaController(this);
+        mediaController.setAnchorView(stiAdVideoView);
+
+        stiAdVideoView.setMediaController(mediaController);
+        stiAdVideoView.start();
+
     }
 }

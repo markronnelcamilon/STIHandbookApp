@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "432546830007",
+    "project_id": "sti-student-handbook",
+    "storage_bucket": "sti-student-handbook.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:432546830007:android:cec1f12c656ae8fc935f32",
+        "android_client_info": {
+          "package_name": "com.macvindev.stistudenthandbook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "432546830007-dgcruu9bf7ah273cnput25cjjbjb7f65.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.macvindev.stistudenthandbook",
+            "certificate_hash": "381fb15f08c41ba06efd766cb049b0028dd49dd6"
+          }
+        },
+        {
+          "client_id": "432546830007-jj8lm24tp3b8lhl68nhkgf16n44mtn4i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClCeWrQBjUl9XawED39Y_HFSipqfIV_3g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "432546830007-jj8lm24tp3b8lhl68nhkgf16n44mtn4i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

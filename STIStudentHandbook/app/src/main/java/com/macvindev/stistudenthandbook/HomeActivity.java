@@ -16,6 +16,8 @@ public class HomeActivity extends AppCompatActivity {
     ImageButton stiHymnImageButton;
     ImageButton stiWebsiteImageButton;
     ImageButton stiAdImageButton;
+    ImageButton qrCodeGeneratorImageButton;
+    ImageButton suggestionBoxImageButton;
 
     TextView emailTextView;
 
@@ -34,6 +36,8 @@ public class HomeActivity extends AppCompatActivity {
         stiHymnImageButton = findViewById(R.id.stiHymnImageButton);
         stiWebsiteImageButton = findViewById(R.id.stiWebsiteImageButton);
         stiAdImageButton = findViewById(R.id.stiAdImageButton);
+        qrCodeGeneratorImageButton = findViewById(R.id.qrCodeGeneratorButton);
+        suggestionBoxImageButton = findViewById(R.id.suggestionBoxButton);
 
         emailTextView = findViewById(R.id.emailTextView);
 
@@ -78,6 +82,21 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intentToSTIVideo = new Intent (HomeActivity.this, VideoActivity.class);
                 startActivity(intentToSTIVideo);
+            }
+        });
+
+        qrCodeGeneratorImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentToQRCodeGenerator = new Intent (HomeActivity.this, QRGenerator.class);
+                startActivity(intentToQRCodeGenerator);
+            }
+        });
+        suggestionBoxImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentToSuggestionBox = new Intent (HomeActivity.this, SuggestionBox.class);
+                startActivity(intentToSuggestionBox);
             }
         });
     }

@@ -6,8 +6,14 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -19,17 +25,38 @@ public class HomeActivity extends AppCompatActivity {
     ImageButton qrCodeGeneratorImageButton;
     ImageButton suggestionBoxImageButton;
 
+    Button logoutButton;
+
     TextView emailTextView;
+    TextView nameTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        Intent fromMain = getIntent();
-        Bundle bundle = fromMain.getExtras();
+        nameTextView = findViewById(R.id.nameTextView);
+        emailTextView = findViewById(R.id.emailTextView);
 
-        String emailAddress = (String) bundle.get("email");
+        GoogleSignInAccount signInAccount = GoogleSignIn.getLastSignedInAccount(this);
+        if (signInAccount != null){
+           nameTextView.setText(signInAccount.getDisplayName());
+           emailTextView.setText(signInAccount.getEmail());
+        }
+
+
+        logoutButton = findViewById(R.id.logoutButton);
+        logoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intentToMainActivity = new Intent (HomeActivity.this, MainActivity.class);
+                startActivity(intentToMainActivity);
+                Toast.makeText(HomeActivity.this, "Successfully logged out!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
 
         calculatorImageButton = findViewById(R.id.calculatorImageButton);
         historyImageButton = findViewById(R.id.historyImageButton);
@@ -39,10 +66,10 @@ public class HomeActivity extends AppCompatActivity {
         qrCodeGeneratorImageButton = findViewById(R.id.qrCodeGeneratorButton);
         suggestionBoxImageButton = findViewById(R.id.suggestionBoxButton);
 
-        emailTextView = findViewById(R.id.emailTextView);
 
 
-        emailTextView.setText(emailAddress);
+
+
 
         calculatorImageButton.setOnClickListener(new View.OnClickListener() {
             @Override

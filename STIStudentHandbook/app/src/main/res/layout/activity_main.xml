@@ -60,6 +60,17 @@
             android:background="#FFEB3B"
             android:text="@string/login" />
 
+        <Button
+            android:id="@+id/google_signIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="32dp"
+            android:background="#FFEB3B"
+            android:text="SIgn in with Google" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
